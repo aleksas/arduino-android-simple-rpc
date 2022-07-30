@@ -1,16 +1,6 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a3d8a40d7133497caa11051eaac6f1a2)](https://www.codacy.com/manual/kai-morich/SimpleBluetoothTerminal?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kai-morich/SimpleBluetoothTerminal&amp;utm_campaign=Badge_Grade)
+# SimpleRPCBluetoothTerminal
 
-# SimpleBluetoothTerminal
+This Android app is a very crude alteration of [SimpleBluetoothTerminal](https://github.com/kai-morich/SimpleBluetoothTerminal).
+This Android app provides a [SimpleRPC](https://simplerpc.readthedocs.io/en/latest/)([github](https://github.com/jfjlaros/simpleRPC/)) bluetooth client. App uses [SimpleRPC client JAVA implementation](https://search.maven.org/search?q=a:arduino-simple-rpc) ([github](https://github.com/aleksas/arduino-java-simple-rpc)).
 
-This Android app provides a line-oriented terminal / console for classic Bluetooth (2.x) devices implementing the Bluetooth Serial Port Profile (SPP)
-
-For an overview on Android Bluetooth communication see 
-[Android Bluetooth Overview](https://developer.android.com/guide/topics/connectivity/bluetooth).
-
-This App implements RFCOMM connection to the well-known SPP UUID 00001101-0000-1000-8000-00805F9B34FB
-
-## Motivation
-
-I got various requests asking for help with Android development or source code for my 
-[Serial Bluetooth Terminal](https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal) app.
-Here you find a simplified version of my app.
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/594470/183281500-2e61592c-1436-42f5-9819-ed163207efe7.gif)

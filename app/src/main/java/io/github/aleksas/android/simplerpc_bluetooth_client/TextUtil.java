@@ -1,4 +1,4 @@
-package de.kai_morich.simple_bluetooth_terminal;
+package io.github.aleksas.android.simplerpc_bluetooth_client;
 
 import android.text.Editable;
 import android.text.InputType;
