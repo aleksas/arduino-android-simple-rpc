@@ -3,4 +3,6 @@
     <string name="devices">Bluetooth Devices</string>
     <string name="methods">Methods</string>
     <string name="status">Status</string>
+    <string name="bluetooth_not_supported">Bluetooth not supported</string>
+    <string name="ble_not_supported">BLE not supported</string>
 </resources>

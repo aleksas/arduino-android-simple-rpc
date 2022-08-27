@@ -7,6 +7,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.text.Spannable;
@@ -18,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -59,6 +61,20 @@ public class MethodFragment extends ListFragment implements ServiceConnection, S
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Use this check to determine whether Bluetooth classic is supported on the device.
+// Then you can selectively disable BLE-related features.
+        if (!getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
+            Toast.makeText(this.getContext(), R.string.bluetooth_not_supported, Toast.LENGTH_SHORT).show();
+            getActivity().finish();
+        }
+// Use this check to determine whether BLE is supported on the device. Then
+// you can selectively disable BLE-related features.
+        if (!getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
+            Toast.makeText(this.getContext(), R.string.ble_not_supported, Toast.LENGTH_SHORT).show();
+            getActivity().finish();
+        }
+
         setRetainInstance(true);
         deviceAddress = getArguments().getString("device");
 
