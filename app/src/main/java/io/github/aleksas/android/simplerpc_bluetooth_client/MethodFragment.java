@@ -63,15 +63,8 @@ public class MethodFragment extends ListFragment implements ServiceConnection, S
         super.onCreate(savedInstanceState);
 
         // Use this check to determine whether Bluetooth classic is supported on the device.
-// Then you can selectively disable BLE-related features.
         if (!getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
             Toast.makeText(this.getContext(), R.string.bluetooth_not_supported, Toast.LENGTH_SHORT).show();
-            getActivity().finish();
-        }
-// Use this check to determine whether BLE is supported on the device. Then
-// you can selectively disable BLE-related features.
-        if (!getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH_LE)) {
-            Toast.makeText(this.getContext(), R.string.ble_not_supported, Toast.LENGTH_SHORT).show();
             getActivity().finish();
         }
 
